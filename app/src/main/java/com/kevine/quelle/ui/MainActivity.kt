@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.kevine.quelle.PostsrvAdapter
 import com.kevine.quelle.R
 import com.kevine.quelle.api.ApiClient
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+
     fun displayPosts(){
         val retrofit = ApiClient.buildClient(ApiInterface::class.java)
         val request = retrofit.getPosts()
@@ -46,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvposts.layoutManager=LinearLayoutManager(this)
 
-        var contactAdapter= PostsrvAdapter(postsList)
-        binding.rvposts.adapter=contactAdapter
     }
 
 
