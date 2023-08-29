@@ -7,16 +7,16 @@ import com.kevine.quelle.database.PostsDb
 import com.kevine.quelle.model.PostData
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import retrofit2.Call
 import retrofit2.Response
 
 class PostsRepository {
 
-//    val apiClient = ApiClient.buildClient(ApiInterface::class.java)
+    val apiClient = ApiClient.buildClient(ApiInterface::class.java)
 
-//    suspend fun  getPosts(): Response<PostData> {
-//        return withContext(Dispatchers.IO){
-//            apiClient.getPosts()
-//        }
-//
-//}
+    suspend fun  getPosts(): Response<List<PostData>> {
+    return withContext(Dispatchers.IO){
+        apiClient.getPosts()
+    }
+}
 }

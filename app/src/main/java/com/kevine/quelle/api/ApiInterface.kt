@@ -8,7 +8,7 @@ import retrofit2.http.GET
 
 interface ApiInterface {
         @GET("/posts")
-        fun getPosts(): Call<List<PostData>>
+       suspend fun getPosts(): Response<List<PostData>>
 
 
 }
