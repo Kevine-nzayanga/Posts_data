@@ -50,26 +50,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-//    fun displayPosts(){
-//        val retrofit = ApiClient.buildClient(ApiInterface::class.java)
-//        val request = retrofit.getPosts()
-//        request.(object: retrofit2.Callback<List<PostData>>{
-//            override fun onResponse(call: Call<List<PostData>>, response:
-//            Response<List<PostData>>
-//            ) {
-//                if (response.isSuccessful){
-//                    var posts = response.body()
-//                    Toast.makeText(baseContext, "${posts!!.size} posts", Toast.
-//                    LENGTH_LONG).show()
-//                }
-//            }
-//            override fun onFailure(call: Call<List<PostData>>, t: Throwable) {
-//            }
-//        })
-//
-//        binding.rvposts.layoutManager=LinearLayoutManager(this)
-//
-//    }
+
 
     }
 
